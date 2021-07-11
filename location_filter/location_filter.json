@@ -1,0 +1,61 @@
+{
+	"$id": "https://example.com/endless_schemas/location_filter",
+	"type": "object",
+	"properties": {
+		"planet": { "$ref": "#/definitions/generic_filter_property" },
+		"system": { "$ref": "#/definitions/generic_filter_property" },
+		"government": { "$ref": "#/definitions/generic_filter_property" },
+		"attributes": { "$ref": "#/definitions/generic_filter_property" },
+		"outfits": { "$ref": "#/definitions/generic_filter_property" },
+		"category": { "$ref": "#/definitions/generic_filter_property" },
+		"near": {
+			"type": "object",
+			"properties": {
+				"modifier": { "$ref": "#/definitions/optional_modifiers" },
+				"location": { "type": "string" },
+				"min": { "type": "number" },
+				"max": { "type": "number" }
+			},
+			"additionalProperties": false,
+			"required": ["location"]
+		},
+		"distance": {
+			"type": "object",
+			"properties": {
+				"modifier": { "$ref": "#/definitions/optional_modifiers" },
+				"min": { "type": "number" },
+				"max": { "type": "number" }
+			},
+			"additionalProperties": false,
+			"required": ["max"]
+		},
+		"not": { "$ref": "#/definitions/subfilters" },
+		"neighbor": { "$ref": "#/definitions/subfilters" }
+	},
+	"additionalProperties": false,
+	"minProperties": 1,
+	"definitions": {
+		"optional_modifiers": { "enum": ["not", "neighbor"] },
+		"attributeList": {
+			"type": "array",
+			"items": { "type": "string" },
+			"minItems": 1,
+			"uniqueItems": true
+		},
+		"generic_filter_property": {
+			"type": "object",
+			"properties": {
+				"modifier": { "$ref": "#/definitions/optional_modifiers" },
+				"attributeList": { "$ref": "#/definitions/name_list" }
+			},
+			"additionalProperties": false,
+			"required": ["attributeList"]
+		},
+		"subfilters": {
+			"type": "array",
+				"items" : { "$ref": "#" },
+				"uniqueItems": true
+		}
+
+	}
+}
