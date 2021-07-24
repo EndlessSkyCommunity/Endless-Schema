@@ -3,7 +3,7 @@
 	"type": "object",
 	"properties": {
 		"condition": { "$ref": "#/definitions/condition" },
-		"conmparison": { "$ref": "#/definitions/conmparison" }
+		"conmparison": { "$ref": "#/definitions/comparison" }
 	},
     "additionalProperties": false,
     "minProperties": 1,
