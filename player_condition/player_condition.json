@@ -1,8 +1,14 @@
 {
 	"$id": "https://example.com/endless_schemas/player_condition",
 	"type": "object",
-	"properties": {},
+	"properties": {
+		"condition": { "$ref": "#/definitions/condition" },
+		"conmparison": { "$ref": "#/definitions/conmparison" }
+	},
     "additionalProperties": false,
     "minProperties": 1,
-	"definitions": {}
+	"definitions": {
+		"condition": { "type": "string" },
+		"comparison": { "enum": ["==", "!=", "<", ">", "<=", ">="] }
+	}
 }
