@@ -3,7 +3,13 @@
 	"type": "object",
 	"properties": {
 		"condition": { "$ref": "#/definitions/condition" },
-		"comparison": { "$ref": "#/definitions/comparison" }
+		"comparison": { "$ref": "#/definitions/comparison" },
+		"value_compared": {
+			"anyOf": [
+				{ "$ref": "#/definitions/value#" }, 
+				{ "$ref": "#/definitions/value_expression" }
+			]
+		}
 	},
     "additionalProperties": false,
     "minProperties": 1,
