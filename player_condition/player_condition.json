@@ -4,12 +4,7 @@
 	"properties": {
 		"condition": { "$ref": "#/definitions/condition" },
 		"comparison": { "$ref": "#/definitions/comparison" },
-		"value_compared": {
-			"anyOf": [
-				{ "$ref": "#/definitions/value#" }, 
-				{ "$ref": "#/definitions/value_expression" }
-			]
-		}
+		"value_or_expr": {	"$ref": "#/definitions/value_or_expr" }
 	},
     "additionalProperties": false,
     "minProperties": 1,
@@ -17,6 +12,12 @@
 		"condition": { "type": "string" },
 		"comparison": { "enum": ["==", "!=", "<", ">", "<=", ">="] },
 		"value#": { "type": "string" },
-		"value_expression": { "type": "string" }
+		"value_expression": { "type": "string" },
+		"value_or_expr": {
+			"anyOf": [
+				{ "$ref": "#/definitions/value#" }, 
+				{ "$ref": "#/definitions/value_expression" }
+			]
+		}
 	}
 }
