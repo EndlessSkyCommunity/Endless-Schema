@@ -9,6 +9,7 @@
     "minProperties": 1,
 	"definitions": {
 		"condition": { "type": "string" },
-		"comparison": { "enum": ["==", "!=", "<", ">", "<=", ">="] }
+		"comparison": { "enum": ["==", "!=", "<", ">", "<=", ">="] },
+		"value#": { "type": "string" }
 	}
 }
