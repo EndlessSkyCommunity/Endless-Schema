@@ -10,6 +10,7 @@
 	"definitions": {
 		"condition": { "type": "string" },
 		"comparison": { "enum": ["==", "!=", "<", ">", "<=", ">="] },
-		"value#": { "type": "string" }
+		"value#": { "type": "string" },
+		"value_expression#": { "type": "string" }
 	}
 }
