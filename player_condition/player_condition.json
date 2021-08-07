@@ -4,7 +4,7 @@
 	"properties": {
 		"condition": { "$ref": "#/definitions/condition" },
 		"comparison": { "$ref": "#/definitions/comparison" },
-		"value_or_expr": {	"$ref": "#/definitions/value_or_expr" }
+		"value_or_expr": { "$ref": "#/definitions/value_or_expr" }
 	},
     "additionalProperties": false,
     "minProperties": 1,
@@ -21,6 +21,8 @@
 				{ "$ref": "#/definitions/value#" }, 
 				{ "$ref": "#/definitions/value_expression" }
 			]
-		}
+		},
+		"has": { "$ref": "#/definitions/condition" },
+		"not": { "$ref": "#/definitions/condition" }
 	}
 }
