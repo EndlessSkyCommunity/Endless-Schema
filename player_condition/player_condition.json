@@ -12,7 +12,10 @@
 		"condition": { "type": "string" },
 		"comparison": { "enum": ["==", "!=", "<", ">", "<=", ">="] },
 		"value#": { "type": "string" },
-		"value_expression": { "type": "string" },
+		"value_expression": {
+			"type": "string",
+			"pattern": "^([^+*-\/\n]+[*+-\/])+[^+*-\/\n]+ *$"
+		},
 		"value_or_expr": {
 			"anyOf": [
 				{ "$ref": "#/definitions/value#" }, 
