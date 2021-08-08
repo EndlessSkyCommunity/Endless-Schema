@@ -25,6 +25,7 @@
 	"definitions": {
 		"condition": { "type": "string" },
 		"comparison": { "enum": ["==", "!=", "<", ">", "<=", ">="] },
+		"mut_operator": { "enum": ["=", "+=", "-=", "*=", "/=", "<?=", ">?="]},
 		"value#": { "type": "string" },
 		"value_expression": {
 			"type": "string",
