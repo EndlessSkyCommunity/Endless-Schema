@@ -8,8 +8,8 @@
 		"has": { "$ref": "#/definitions/condition_list" },
 		"not": { "$ref": "#/definitions/condition_list" },
 		"never": { "type": "boolean" },
-		"and": { "type": "#/definitions/recurse_logic" },
-		"or": { "type": "#/definitions/recurse_logic" }
+		"and": { "$ref": "#/definitions/recurse_logic" },
+		"or": { "$ref": "#/definitions/recurse_logic" }
 	},
     "additionalProperties": false,
     "minProperties": 1,
