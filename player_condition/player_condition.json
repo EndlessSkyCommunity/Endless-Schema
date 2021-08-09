@@ -28,6 +28,8 @@
 				{ "$ref": "#/definitions/value_expression" }
 			]
 		},
+		"test_conditionset": {},
+		"applied_conditionset": {},
 		"condition_list": {
 			"type": "array",
 			"uniqueItems": true,
