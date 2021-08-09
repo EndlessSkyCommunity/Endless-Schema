@@ -1,7 +1,17 @@
 {
 	"$id": "https://example.com/endless_schemas/player_condition",
 	"type": "object",
-	"properties": {},
+	"properties": {
+        "objective": {
+            "type": "array",
+            "uniqueItems": true,
+            "minItems": 1,
+            "items": {
+                "type": "string",
+                "enum": ["save", "kill", "board", "assist", "disable", "scan_cargo", "scan_outfits", "evade", "accompany", "capture", "provoke"]
+            }
+        }
+    },
     "additionalProperties": false,
     "minProperties": 1,
 	"definitions": {}
