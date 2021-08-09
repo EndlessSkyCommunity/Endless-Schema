@@ -6,7 +6,8 @@
 		"comparison": { "$ref": "#/definitions/comparison" },
 		"value_or_expr": { "$ref": "#/definitions/value_or_expr" },
 		"has": { "$ref": "#/definitions/condition_list" },
-		"not": { "$ref": "#/definitions/condition_list" }
+		"not": { "$ref": "#/definitions/condition_list" },
+		"never": { "type": "boolean" }
 	},
     "additionalProperties": false,
     "minProperties": 1,
