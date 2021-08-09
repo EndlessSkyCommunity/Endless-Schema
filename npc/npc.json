@@ -1,5 +1,5 @@
 {
-	"$id": "https://example.com/endless_schemas/player_condition",
+	"$id": "https://example.com/endless_schemas/npc",
 	"type": "object",
 	"properties": {
         "objective": {
