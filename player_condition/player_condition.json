@@ -5,20 +5,8 @@
 		"condition": { "$ref": "#/definitions/condition" },
 		"comparison": { "$ref": "#/definitions/comparison" },
 		"value_or_expr": { "$ref": "#/definitions/value_or_expr" },
-		"has": {
-			"type": "array",
-			"uniqueItems": true,
-			"items": {
-				"type": { "$ref": "#/definitions/condition" }
-			}
-		},
-		"not": {
-			"type": "array",
-			"uniqueItems": true,
-			"items": {
-				"type": { "$ref": "#/definitions/condition" }
-			}
-		}
+		"has": { "$ref": "#/definitions/condition_list" },
+		"not": { "$ref": "#/definitions/condition_list" }
 	},
     "additionalProperties": false,
     "minProperties": 1,
@@ -36,6 +24,13 @@
 				{ "$ref": "#/definitions/value#" }, 
 				{ "$ref": "#/definitions/value_expression" }
 			]
+		},
+		"condition_list": {
+			"type": "array",
+			"uniqueItems": true,
+			"items": {
+				"type": { "$ref": "#/definitions/condition" }
+			}
 		}
 	}
 }
